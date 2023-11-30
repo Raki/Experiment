@@ -104,6 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>imgui;utils;$(VULKAN_SDK)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,6 +120,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>imgui;utils;$(VULKAN_SDK)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +131,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseApp.cpp" />
     <ClCompile Include="Experiment.cpp" />
+    <ClCompile Include="utils\Colors.cpp" />
+    <ClCompile Include="utils\Utility.cpp" />
+    <ClCompile Include="utils\VKUtility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseApp.h" />
+    <ClInclude Include="utils\bezier.h" />
+    <ClInclude Include="utils\Colors.h" />
+    <ClInclude Include="utils\CommonHeaders.h" />
+    <ClInclude Include="utils\stb_image.h" />
+    <ClInclude Include="utils\Utility.h" />
+    <ClInclude Include="utils\VKUtility.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

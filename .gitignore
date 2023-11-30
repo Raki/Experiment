@@ -40,3 +40,5 @@ $RECYCLE.BIN/
 *.sdf
 *.opensdf
 *.cachefile
+
+x64/*
